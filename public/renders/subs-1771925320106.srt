@@ -1,0 +1,24 @@
+1
+00:00:00,000 --> 00:00:05,000
+✨ The Magic Behind Your Screen ✨
+
+2
+00:00:05,000 --> 00:00:09,000
+Shashwat Solanki: Full-Stack Dev
+
+3
+00:00:09,000 --> 00:00:14,000
+Pixels to Perfection: Front-End UI/UX
+
+4
+00:00:14,000 --> 00:00:19,000
+Logic & Power: Back-End Architecture
+
+5
+00:00:19,000 --> 00:00:25,000
+Concept to Code: End-to-End Vision
+
+6
+00:00:25,000 --> 00:00:30,000
+Innovation. Integration. Impact. #FullStackDev
+

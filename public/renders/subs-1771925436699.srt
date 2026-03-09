@@ -1,0 +1,28 @@
+1
+00:00:00,000 --> 00:00:04,000
+🤔 Full-Stack Magic!
+
+2
+00:00:04,000 --> 00:00:09,000
+🚀 Shashwat Solanki, Full-Stack Dev
+
+3
+00:00:09,000 --> 00:00:13,000
+✨ Frontend & Backend Expert
+
+4
+00:00:13,000 --> 00:00:18,000
+💡 Ideas into Reality
+
+5
+00:00:18,000 --> 00:00:22,000
+🧠 The Complete Package
+
+6
+00:00:22,000 --> 00:00:26,000
+🔒 Secure & User-Friendly
+
+7
+00:00:26,000 --> 00:00:30,000
+🛠️ Let's Build! #FullStackDev
+
