@@ -5,9 +5,14 @@ import path from "path";
 import crypto from "crypto";
 import axios from "axios";
 import ffmpeg from "fluent-ffmpeg";
+// @ts-ignore
+import ffmpegPath from "ffmpeg-static";
+// @ts-ignore
+import ffprobeStatic from "ffprobe-static";
 import { v4 as uuidv4 } from "uuid";
 import { extractText } from "@/lib/extract";
-
+ffmpeg.setFfmpegPath("C:\\ffmpeg\\bin\\ffmpeg.exe");
+ffmpeg.setFfprobePath("C:\\ffmpeg\\bin\\ffprobe.exe");
 export const runtime = "nodejs";
 
 type ReelScene = {
@@ -58,7 +63,8 @@ function safeJsonFromModelText(text: string) {
   } catch {
     const start = text.indexOf("{");
     const end = text.lastIndexOf("}") + 1;
-    if (start === -1 || end <= start) throw new Error("Model did not return JSON");
+    if (start === -1 || end <= start)
+      throw new Error("Model did not return JSON");
     return JSON.parse(text.slice(start, end));
   }
 }
@@ -117,7 +123,9 @@ async function readAndBumpQuota() {
   };
 }
 
-async function generateScriptWithGemini(inputText: string): Promise<ReelScript> {
+async function generateScriptWithGemini(
+  inputText: string
+): Promise<ReelScript> {
   // Dev shortcut: allow testing without spending a Gemini call.
   // Set MOCK_REEL=1 in .env.local to use this hard-coded script.
   if (process.env.MOCK_REEL === "1") {
@@ -127,7 +135,8 @@ async function generateScriptWithGemini(inputText: string): Promise<ReelScript> 
       scenes: [
         {
           sceneNumber: 1,
-          narration: "Wait, before you scroll, this might actually save you time.",
+          narration:
+            "Wait, before you scroll, this might actually save you time.",
           caption: "Before you scroll…",
           durationInSeconds: 4,
         },
@@ -225,11 +234,15 @@ ${inputText}
   if (!content) throw new Error("No content returned from Gemini");
 
   const parsed = safeJsonFromModelText(content) as ReelScript;
-  if (!parsed?.scenes?.length) throw new Error("Invalid script: missing scenes");
+  if (!parsed?.scenes?.length)
+    throw new Error("Invalid script: missing scenes");
   return parsed;
 }
 
-async function generateVoiceWithElevenLabs(scenes: ReelScene[], stableId: string) {
+async function generateVoiceWithElevenLabs(
+  scenes: ReelScene[],
+  stableId: string
+) {
   const apiKey = process.env.ELEVEN_API_KEY;
   if (!apiKey) throw new Error("Missing ELEVEN_API_KEY");
 
@@ -268,8 +281,8 @@ async function generateVoiceWithElevenLabs(scenes: ReelScene[], stableId: string
 }
 
 async function renderReel(audioPath: string, scenes: ReelScene[]) {
-  ffmpeg.setFfmpegPath("ffmpeg");
-
+  ffmpeg.setFfmpegPath(ffmpegPath as string);
+  ffmpeg.setFfprobePath(ffprobeStatic.path);
   const backgroundPath = path.join(
     process.cwd(),
     "public",
@@ -426,13 +439,11 @@ export async function POST(req: NextRequest) {
 
     // If we generated a new script we already bumped quota.
     // If we hit cache, treat it as "no extra Gemini call" and keep quota unchanged.
-    let quotaInfo = null as
-      | {
-          maxPerDay: number;
-          used: number;
-          remaining: number;
-        }
-      | null;
+    let quotaInfo = null as {
+      maxPerDay: number;
+      used: number;
+      remaining: number;
+    } | null;
 
     if (!usedCache) {
       // Re-read quota file to get current values for the response payload.

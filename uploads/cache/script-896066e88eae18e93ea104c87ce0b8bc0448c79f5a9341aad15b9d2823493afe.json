@@ -1,0 +1,48 @@
+{
+  "title": "Quantum Physics: The Secret Behind Your Tech!",
+  "totalDuration": 30,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "narration": "Ever wonder how your phone, MRI, or even lasers work at a fundamental level?",
+      "caption": "Your tech's secret sauce?",
+      "durationInSeconds": 4
+    },
+    {
+      "sceneNumber": 2,
+      "narration": "Turns out, 'classic' physics is great for big objects, but zoom in super small, and it totally breaks down.",
+      "caption": "Classical physics: ❌ for tiny stuff",
+      "durationInSeconds": 4
+    },
+    {
+      "sceneNumber": 3,
+      "narration": "That's why we need Quantum Mechanics! It's the language of the ultra-tiny.",
+      "caption": "Enter: Quantum Mechanics ⚛️",
+      "durationInSeconds": 4
+    },
+    {
+      "sceneNumber": 4,
+      "narration": "Imagine light acting like both a wave *and* a particle. And guess what? Even YOU, made of matter, have wave-like properties!",
+      "caption": "You're a wave, Harry! 🌊",
+      "durationInSeconds": 5
+    },
+    {
+      "sceneNumber": 5,
+      "narration": "And here's the wild part: you can't perfectly know a particle's exact position AND its momentum at the exact same time. It's called the Uncertainty Principle.",
+      "caption": "Uncertainty Principle 🤯",
+      "durationInSeconds": 5
+    },
+    {
+      "sceneNumber": 6,
+      "narration": "This mind-bending quantum reality is *why* we have modern tech like advanced chips, medical scanners, and even life itself!",
+      "caption": "Powering YOUR future 🚀",
+      "durationInSeconds": 4
+    },
+    {
+      "sceneNumber": 7,
+      "narration": "Ready to explore the weird and wonderful world that makes everything possible? Let's get quantum!",
+      "caption": "Mind blown yet? Follow for more! ✨",
+      "durationInSeconds": 4
+    }
+  ]
+}
