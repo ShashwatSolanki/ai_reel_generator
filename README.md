@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="https://raw.githubusercontent.com/ShashwatSolanki/ShashwatSolanki/main/assets/aireel.png" alt="AI Reel Generator application preview" width="920" />
+  <img src="https://raw.githubusercontent.com/ShashwatSolanki/ShashwatSolanki/main/assets/aireel-2.png" alt="AI Reel Generator screenshot" width="920" />
 
   [![CI](https://github.com/ShashwatSolanki/ai_reel_generator/actions/workflows/ci.yml/badge.svg)](https://github.com/ShashwatSolanki/ai_reel_generator/actions/workflows/ci.yml)
   <a href="https://shashwatsolanki.github.io/ShashwatSolanki/#work">Portfolio preview &amp; project overview</a>
