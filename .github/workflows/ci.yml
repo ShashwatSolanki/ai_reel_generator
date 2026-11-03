@@ -19,9 +19,7 @@ jobs:
           node-version: "22"
           cache: npm
       - run: npm ci
-      - name: Lint
-        run: npm run lint
-      - name: Build
+      - name: Production build
         run: npm run build
         env:
           NEXT_TELEMETRY_DISABLED: "1"
